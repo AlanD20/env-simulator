@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile First, then md: applies to larger than 640px screen size */
+@layer base{
+
+    /* Global Classes */
+    body{
+        @apply overflow-hidden select-none bg-green-200;
+    }
+    .btn{
+        @apply px-2 py-1 bg-pink-500 hover:bg-pink-600 cursor-pointer transition-all duration-200 ease-out rounded-md text-2xl;
+    }
+    .input{
+        @apply p-1 ring-1 ring-gray-500 focus:ring-yellow-600 transition-all duration-150 ease-out rounded-md caret-slate-900 text-slate-900 w-20;
+    }
+    .col-center{
+        @apply w-full h-screen flex items-center flex-col;
+    }
+
+    /* Header */
+    .header-container{
+        @apply w-full bg-sky-500 shadow-lg py-3 px-6 flex justify-center items-center font-bold text-white flex-row flex-wrap;
+    }
+    .header-container__left{
+        @apply mr-auto flex-col flex justify-center items-center gap-3;
+        @apply md:flex-wrap md:flex-row;
+    }
+    .header-container__right{
+        @apply flex justify-center items-center gap-5 flex-col;
+        @apply md:flex-row;
+    }
+    .input-card{
+        @apply flex justify-center items-center gap-3 w-full md:w-auto;
+    }
+    .input-card > label:first-child{
+        @apply mr-auto md:mr-0;
+    }
+    .map-info{
+        @apply flex flex-col justify-center items-center;
+        @apply md:flex-row md:gap-8;
+    }
+
+    /* Body */
+    .main-container{
+        @apply overflow-y-scroll;
+    }
+    .map-container{
+        @apply w-full flex flex-wrap justify-center;
+    }
+    .loader{
+        @apply text-4xl font-bold italic tracking-wider;
+    }
+    .row{
+        @apply flex w-full justify-center;
+    }
+    .tile{
+        @apply cursor-pointer hover:scale-105 hover:z-10 transition-transform duration-200 ease-out w-[150px] relative;
+    }
+    
+    .tile__img{
+        @apply aspect-square;
+    }
+    .tile__info{
+        @apply flex absolute inset-0 font-bold text-white rounded-lg flex-col justify-end items-center text-sm;
+    }
+    .tile__bg{
+        @apply bg-black bg-opacity-40 w-full rounded-md flex flex-col justify-center items-center pb-1;
+    }
+}
