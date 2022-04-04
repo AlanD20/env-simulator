@@ -1,12 +1,12 @@
 import { Meteor } from 'meteor/meteor';
 import React, { createContext, useEffect, useRef } from 'react';
-import Body from './components/Body';
-import Header from './components/Header';
+import Body from './pages/Body';
+import Header from './pages/Header';
 import {Types as _t} from './Types';
-import {Pollution as _p} from '../api/Pollution';
+import {Pollution as _p} from '/imports/api/GridMap/Helpers/Pollution';
 import useFetchCol from './hooks/useFetchCol';
-import '../api/GridMapMethods';
-import '../api/GridMap';
+import '/imports/api/GridMap/methods';
+import '/imports/api/GridMap/Helpers/GridMap';
 
 type AppProps = {};
 

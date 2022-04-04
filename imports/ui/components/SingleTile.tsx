@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { GlobalDataContext } from '../App';
 import {Types as _t} from '../Types';
-import {GridMap as _GridMap} from '../../api/GridMap';
+import {GridMap as _GridMap} from '../../api/GridMap/Helpers/GridMap';
+import { Meteor } from 'meteor/meteor';
 
 type SingleTileProps = {
     id: string,
@@ -10,15 +11,16 @@ type SingleTileProps = {
     adjacent: object | undefined,
     rowIdx: number,
     tileIdx: number,
+    next?: number,
 }
 
-export default function SingleTile({id, type, 'data-pollution': pollution, adjacent, rowIdx, tileIdx }: SingleTileProps) {
+export default function SingleTile({id, type, 'data-pollution': pollution, adjacent, rowIdx, tileIdx, next }: SingleTileProps) {
 
     const _glob = useContext(GlobalDataContext);
     
     const src = _GridMap.getSrcFromType(type);
     const title: string = ['id: '+ id, 'Type: ' + type, 'Pollution: '+pollution].join('\n');
-    
+
     if(_glob !== null && !_glob.grid.get.isAdjSet){
         _glob.grid.get.layout.rows[rowIdx].row[tileIdx].adj = adjacent as _t.Adjacent;
     }

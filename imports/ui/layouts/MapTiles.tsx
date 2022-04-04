@@ -1,5 +1,5 @@
 import React, { useContext} from 'react';
-import RowTile from './RowTile';
+import RowTile from '../components/RowTile';
 import { Types as _t } from '../Types';
 import { GlobalDataContext } from '../App';
 

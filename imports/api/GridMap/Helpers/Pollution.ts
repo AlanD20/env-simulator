@@ -1,5 +1,5 @@
-import { GridMapCollection } from './GridMapCollection';
-import { Types as _t } from "../ui/Types";
+import { GridMapCollection } from '../gridmap';
+import { Types as _t } from "/imports/ui/Types";
 
 //
 // This file contains all the pollution related functions

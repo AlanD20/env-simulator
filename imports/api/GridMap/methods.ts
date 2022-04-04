@@ -1,8 +1,8 @@
 import { Meteor } from "meteor/meteor";
-import { Types as _t } from '../ui/Types';
-import { GridMap as _GridMap } from './GridMap';
-import { Pollution } from './Pollution';
-import { GridMapCollection } from './GridMapCollection';
+import { Types as _t } from '/imports/ui/Types';
+import { GridMap as _GridMap } from './Helpers/GridMap';
+import { Pollution } from './Helpers/Pollution';
+import { GridMapCollection } from './gridmap';
 
 declare global {
 

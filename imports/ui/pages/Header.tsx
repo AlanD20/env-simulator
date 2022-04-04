@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { GlobalDataContext } from '../App';
 import {Types as _t} from '../Types';
-import InputCard from './InputCard';
+import InputCard from '../components/InputCard';
 
 type HeaderProps = {}
 

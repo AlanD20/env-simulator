@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Types as _t } from '../Types';
 import { useFind, useSubscribe } from 'meteor/react-meteor-data';
-import { GridMapCollection } from '/imports/api/GridMapCollection';
+import { GridMapCollection } from '../../api/GridMap/gridmap';
 
 type Param = React.MutableRefObject<boolean>;
 

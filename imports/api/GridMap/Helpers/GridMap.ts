@@ -1,4 +1,4 @@
-import { Types as _t } from "../ui/Types";
+import { Types as _t } from "/imports/ui/Types";
 import { nanoid } from 'nanoid'; // Generates random id
 
 //

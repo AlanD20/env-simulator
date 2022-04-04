@@ -1,5 +1,5 @@
 import React from 'react';
-import MapTiles from './MapTiles';
+import MapTiles from '../layouts/MapTiles';
 
 type BodyProps = {}
 

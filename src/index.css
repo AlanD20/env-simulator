@@ -69,3 +69,6 @@
         @apply bg-black bg-opacity-40 w-full rounded-md flex flex-col justify-center items-center pb-1;
     }
 }
+.tile{
+    flex: 0 0 100px;
+}
