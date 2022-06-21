@@ -29,7 +29,7 @@ export default function RowTile({row, id, prev, next, rowIdx}: RowTileProps) {
   },[])
 
   return (
-    <div className="row" key={id}>
+    <div className={"row " + (row.length < 16 ? "justify-center" : "")} key={id}>
         {
             row.map((tile, idx, arr)=>(
                 <SingleTile 

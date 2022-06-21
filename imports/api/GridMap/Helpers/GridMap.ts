@@ -30,8 +30,9 @@ export namespace GridMap {
     }
 
     // Generates a new map
-    export function generate(): _t.GridMap {
+    export function generate(userId: string): _t.GridMap {
         const { layout, x, y, ...others }: _t.GridMap = {
+            userId,
             layout: { rows: [] },
             x: randomNumber(),
             y: randomNumber(),

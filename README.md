@@ -3,7 +3,9 @@
 Environment Simulator is a real-world simulation of how pollutions spread with their effects in the environment.
 
 ###### Notice:
-This project is a solution for a [task](TASK.md). You can look at the file for more information about the task and rules of how to implement the environment simulation.
+This is my solution for [this task](TASK.md).
+
+Feedback according to the required tasks, are found at [feedback pdf](feedback.pdf) file.
 
 ---
 
@@ -23,7 +25,7 @@ This project is a solution for a [task](TASK.md). You can look at the file for m
 - The image base is mongodb image. Running the container gives non interactive bash, to do so, run the container then execute bash:
 `docker run -p 3000:3000 --name app1 env-simulator/app`
 `docker exec -it app1 /bin/bash`
-- Echo out the mongodb connection string and exit out using the following command: 
+- Echo out the mongodb connection string and exit out using the following command:
 `mongosh`
 - export the environments:
     1. `export MONGO_URL='mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.3.1'`

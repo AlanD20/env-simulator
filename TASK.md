@@ -3,7 +3,7 @@ You have to create a small Meteor app using Svelte (preferably), Vue or React on
 
 Some implementation details are intentionally omitted to simulate a real-life situation where you are collaborating with non-programmers and have to make decisions on your own.
 
-Download your solution to GitHub and share it with the following user: github@crs.org.pl.
+Download your solution to GitHub and share it with the following user: ***.
 
 
 ## PREPARATION

@@ -1,4 +1,5 @@
 import { Meteor } from "meteor/meteor";
+import { check } from "meteor/check";
 import { Types as _t } from '/imports/ui/Types';
 import { GridMap as _GridMap } from './Helpers/GridMap';
 import { Pollution } from './Helpers/Pollution';
@@ -11,14 +12,16 @@ declare global {
 
 Meteor.methods({
 
-    'map.generate'() {
+    'map.generate'(userId: string) {
+        check(userId, String);
+
         console.log("%cMap Generated!", "color: yellow;");
         if (Meteor.isServer) {
             Meteor.clearInterval(global.GLOBAL_TIMER_ID);
             global.GLOBAL_TIMER_ID = null;
         }
-        const layout: _t.GridMap = _GridMap.generate();
-        GridMapCollection.remove({});
+        const layout: _t.GridMap = _GridMap.generate(userId);
+        GridMapCollection.remove({ userId });
         return GridMapCollection.insert({
             ...layout,
             createdAt: new Date()

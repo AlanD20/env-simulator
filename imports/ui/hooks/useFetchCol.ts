@@ -5,13 +5,14 @@ import { GridMapCollection } from '../../api/GridMap/gridmap';
 
 type Param = React.MutableRefObject<boolean>;
 
-export default function useFetchCol(isReady: Param, isFinalRow: Param): _t.GlobalDataType {
+export default function useFetchCol(userId: string, isReady: Param, isFinalRow: Param): _t.GlobalDataType {
     const [P_emit, setP_emit] = useState<number>(_t.DEFAULT_P_EMIT);
     const [T_emit, setT_emit] = useState<number>(_t.DEFAULT_T_EMIT);
     const [P_forest, setP_forest] = useState<number>(_t.DEFAULT_P_FOREST);
     const [grid, setGrid] = useState<_t.GridMap>({ ..._t.DEFAULT_LAYOUT });
-    const isLoading = useSubscribe('map.get')();
 
+    const isLoading = useSubscribe('map.get', userId)();
+    // Data from collection
     let gridMapCol: _t.GridMap[] = useFind(() => GridMapCollection.find({}));
 
     useEffect(() => {

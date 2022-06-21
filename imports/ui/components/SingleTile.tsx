@@ -1,8 +1,7 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { GlobalDataContext } from '../App';
 import {Types as _t} from '../Types';
 import {GridMap as _GridMap} from '../../api/GridMap/Helpers/GridMap';
-import { Meteor } from 'meteor/meteor';
 
 type SingleTileProps = {
     id: string,
@@ -10,11 +9,10 @@ type SingleTileProps = {
     'data-pollution': number,
     adjacent: object | undefined,
     rowIdx: number,
-    tileIdx: number,
-    next?: number,
+    tileIdx: number
 }
 
-export default function SingleTile({id, type, 'data-pollution': pollution, adjacent, rowIdx, tileIdx, next }: SingleTileProps) {
+export default function SingleTile({id, type, 'data-pollution': pollution, adjacent, rowIdx, tileIdx }: SingleTileProps) {
 
     const _glob = useContext(GlobalDataContext);
     

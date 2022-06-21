@@ -1,5 +1,8 @@
 //
 // This File contains all the global types and default values.
+
+import { nanoid } from "nanoid"
+
 //
 export namespace Types {
 
@@ -45,6 +48,7 @@ export namespace Types {
     // The inserted data to database must follow GridMap type
     export type GridMap = {
         _id?: string;
+        userId: string;
         layout: { rows: RowType[] };
         x: number;
         y: number;
@@ -82,6 +86,9 @@ export namespace Types {
     //
     // Default Properties
     //
+
+    // Default userId key name in local storage
+    export const DEFAULT_KEY_USER_ID = 'user_id';
 
     // Default max number of rows & columns
     export const DEFAULT_MAX_ROW_COL: number = 20;
@@ -123,6 +130,7 @@ export namespace Types {
 
     // Default values for inserted data into database
     export const DEFAULT_LAYOUT: GridMap = {
+        userId: nanoid(21),
         layout: { rows: [] },
         x: 0,
         y: 0,
